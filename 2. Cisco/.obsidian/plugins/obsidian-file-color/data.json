@@ -1,0 +1,27 @@
+{
+  "cascadeColors": false,
+  "colorBackground": false,
+  "palette": [
+    {
+      "id": "tW0mgGkdKdagmbp0xEoo4",
+      "name": "Pentest",
+      "value": "#fa0000"
+    },
+    {
+      "id": "8XMF3mpnJyRRgaXTarMf_",
+      "name": "Fortinet",
+      "value": "#2f3ad0"
+    },
+    {
+      "id": "YLHLLHrqpjKfayWHWCLe_",
+      "name": "Sec",
+      "value": "#6cf47c"
+    }
+  ],
+  "fileColors": [
+    {
+      "path": "Pós",
+      "color": "YLHLLHrqpjKfayWHWCLe_"
+    }
+  ]
+}

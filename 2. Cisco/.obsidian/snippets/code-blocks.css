@@ -1,0 +1,54 @@
+/* Estilo para blocos de código */
+.code-block {
+    background: #011627;
+    border-radius: 8px;
+    margin: 15px 0;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.code-header {
+    background: #1a1a2e;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2a2a3e;
+}
+
+.code-lang {
+    color: #7fdbca;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.copy-btn {
+    background: #2a2a3e;
+    color: #d6deeb;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: 0.2s;
+}
+
+.copy-btn:hover {
+    background: #7fdbca;
+    color: #011627;
+}
+
+.code-content {
+    padding: 15px;
+    color: #d6deeb;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: auto;
+}
+
+.cmd { color: #ffcb8b; }
+.var { color: #d6deeb; }
+.str { color: #addb67; }
+.cmt { color: #637777; font-style: italic; }

@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "12262ecf0eb4ca15",
+    "type": "split",
+    "children": [
+      {
+        "id": "083c517884968fce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "af1dfb11a2fdd20e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Geral/2.1 Links.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2.1 Links"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c070fe64337ce62a",
+    "type": "split",
+    "children": [
+      {
+        "id": "ee9d65687b1f5ccf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "45756af9d66e8685",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "47acd0f71968cc23",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "bd30f27c4dd01de5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "68e35b4f75b290ae",
+    "type": "split",
+    "children": [
+      {
+        "id": "b3fba905424fd3f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c2cea6f93ea26eb5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Pós/Aula 3.md",
+                "collapseAll": false,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para Aula 3"
+            }
+          },
+          {
+            "id": "8961b006dea65800",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Pós/Aula 3.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para Aula 3"
+            }
+          },
+          {
+            "id": "fddcb2ed145a731a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d2d9f08cff4af95b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Pós/Aula 3.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Aula 3"
+            }
+          },
+          {
+            "id": "7cf2e805fc1af35c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "calendar"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false,
+      "obsidian-importer:Open Importer": false
+    }
+  },
+  "active": "af1dfb11a2fdd20e",
+  "lastOpenFiles": [
+    "3. Certificação/Cisco CCNP 300-745 SDSI v1.0 — Blueprint.md",
+    "2. Geral/2.1 Links.md",
+    "3. Certificação",
+    "www.netacad.com.md",
+    "2. Geral/02_Acesso-e-Console.md",
+    "2. Geral/01_Status-e-Performance.md",
+    "1. Archive/Sem título.md",
+    "1. Archive",
+    "0. Inbox/Sem título.md",
+    "0. Inbox",
+    "2. Geral",
+    "2. Geral/2. E-mail.md",
+    "2. Geral/1. Geral.md",
+    "3. Disciplinas/3.3 Data Wrangling/3.3.1 Material de apoio.md",
+    "3. Disciplinas/3.3 Data Wrangling/attachments/Data_Wrangling_Python/(2.2) Script WDI World Bank.py",
+    "3. Disciplinas/3.3 Data Wrangling/attachments/Data_Wrangling_Python/(1.1) Script Data Wrangling.py",
+    "3. Disciplinas/3.3 Data Wrangling/attachments/Data_Wrangling_Python/(5.4) Script Streaming.ipynb",
+    "3. Disciplinas/3.3 Data Wrangling/attachments/Data_Wrangling_Python/(5.3) Séries Streaming.csv",
+    "3. Disciplinas/3.3 Data Wrangling/attachments/Data_Wrangling_Python/(5.2) Filmes Streaming.csv",
+    "3. Disciplinas/3.3 Data Wrangling/attachments/Data_Wrangling_Python/(5.1) Script Streaming.py",
+    "3. Disciplinas/3.2 Introdução à Programação com Python/3.2.1 Material de apoio.md",
+    "attachments/Introdução_Programação_Python.md",
+    "Introdução_Programação_Python (attachments/Introdução_Programação_Python).md",
+    "attachments/Introdução_Python_22,.md",
+    "3. Disciplinas/3.1 Fundamentos em Estatística/3.1.1 Material de apoio.md",
+    "4. Biblioteca/4.1 Livros baixados.md",
+    "2. Geral/attachments/Instrucoes_Caderno_do_Aluno.png",
+    "4. Biblioteca/4.0 Livros para comprar.md",
+    "3. Disciplinas/3.4 Coleta de Dados - Crawlers e Web Scraping/Sem título.md",
+    "3. Disciplinas/3.0 Abertura_do_Curso/3.0 Abertura_do_Curso.md",
+    "3.Disciplinas/3.0 Abertura_do_Curso/3.0 Abertura_do_Curso.md",
+    "3.Disciplinas/3.0.Abertura_do_Curso/3.0.Abertura_do_Curso.md",
+    "3.Disciplinas/3.0.Abertura_do_Curso/3.0 Abertura_do_Curso.md",
+    "3.Disciplinas/3.0.Abertura_do_Curso/attachments/Aula_naugural_DSIA.pdf.md",
+    "attachments/Aula_naugural_DSIA.pdf.md",
+    "3. Disciplinas/3.0 Abertura do Curso/3.0 Abertura do Curso.md",
+    "3.Disciplinas/3.0.Abertura_do_Curso/3.0 Abertura do Curso.md",
+    "attachments/Pasted image 20260509173132.png",
+    "MBA em Data Science, Inteligência Artificial e Analytics/attachments/Pasted image 20260509173132.png",
+    "LPIC-100/attachments/Pasted image 20260113142913.png",
+    "attachments/Pasted image 20251121165557.png",
+    "Pasted image 20250910211957.png",
+    "Sem título.canvas",
+    "Sem título 1.canvas",
+    "Rede/attachments/Pasted image 20251230194642.png",
+    "Rede/attachments/Pasted image 20251229201445.png",
+    "Rede/attachments/Pasted image 20251229200943.png",
+    "Rede/attachments/Pasted image 20251229200212.png"
+  ]
+}

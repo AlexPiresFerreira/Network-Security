@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "12262ecf0eb4ca15",
+    "type": "split",
+    "children": [
+      {
+        "id": "c70d31ceb2f6cd2a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b848a1215792fa32",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Cisco/0. Inbox/Sem título.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sem título"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c070fe64337ce62a",
+    "type": "split",
+    "children": [
+      {
+        "id": "ee9d65687b1f5ccf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "45756af9d66e8685",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "47acd0f71968cc23",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "bd30f27c4dd01de5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "68e35b4f75b290ae",
+    "type": "split",
+    "children": [
+      {
+        "id": "b3fba905424fd3f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c2cea6f93ea26eb5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Pós/Aula 3.md",
+                "collapseAll": false,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para Aula 3"
+            }
+          },
+          {
+            "id": "8961b006dea65800",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Pós/Aula 3.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para Aula 3"
+            }
+          },
+          {
+            "id": "fddcb2ed145a731a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d2d9f08cff4af95b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Pós/Aula 3.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Aula 3"
+            }
+          },
+          {
+            "id": "7cf2e805fc1af35c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "calendar"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false,
+      "obsidian-importer:Open Importer": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "b848a1215792fa32",
+  "lastOpenFiles": [
+    "3. Fortinet/0. Inbox/Inbox.md",
+    "TCP & IP.md",
+    "Ping.md",
+    "Geral.md",
+    "6. Programação/Python/2. Projetos/2.12. Acessa a página de repositórios de um usuário no GitHub.md",
+    "6. Programação/Python/2. Projetos/2.12..md",
+    "6. Programação/Python/2. Projetos/Sem título.md",
+    "6. Programação/Python/1. Bibliotecas/1.8. ctypes.md",
+    "6. Programação/Python/1. Bibliotecas/Sem título.md",
+    "6. Programação/Expressões regulares/0. Geral.md",
+    "6. Programação/Expressões regulares/Sem título.md",
+    "6. Programação/Expressões regulares",
+    "6. Programação/Sem título",
+    "6. Programação/Python/1. Bibliotecas/1.7. re.md",
+    "6. Programação/Python/1. Bibliotecas/1.6. Socket.md",
+    "6. Programação/Python/1. Bibliotecas/1.5. PyPDF2.md",
+    "6. Programação/Python/1. Bibliotecas/1.4. pandas.md",
+    "6. Programação/Python/18. Tratamento de arquivo.md",
+    "6. Programação/Python/18..md",
+    "6. Programação/Python/Sem título.md",
+    "6. Programação/Python/1. Bibliotecas/1.3. argparse.md",
+    "6. Programação/Python/1. Bibliotecas/1.3..md",
+    "6. Programação/Python/17. Virtualização.md",
+    "6. Programação/Python/17..md",
+    "6. Programação/Python/1. Bibliotecas/1.1. Instalação de pacotes.md",
+    "6. Programação/Python/1. Bibliotecas/1.1..md",
+    "6. Programação/Python/1. Bibliotecas/1.0. Geral.md",
+    "6. Programação/Python/1. Bibliotecas/0. Geral.md",
+    "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144451.png",
+    "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144443.png",
+    "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144435.png",
+    "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144423.png",
+    "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144416.png",
+    "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144410.png",
+    "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144359.png",
+    "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144328.png",
+    "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144319.png",
+    "6. Programação/Python/2. Projetos/attachments",
+    "6. Programação/Python/2. Projetos",
+    "6. Programação/Python/Sem título",
+    "6. Programação/0. IDLE/attachments/LayoutsSpyder.png",
+    "6. Programação/0. IDLE/attachments",
+    "6. Programação/0. IDLE",
+    "6. Programação/0. ID",
+    "6. Programação/0. EDIE",
+    "6. Programação/Programação",
+    "Sem título.canvas",
+    "Sem título 1.canvas"
+  ]
+}
