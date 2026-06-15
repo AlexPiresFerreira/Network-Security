@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Geral.md",
+                "file": "5. Ferramentas/5.4. Certificado SSL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Geral"
+              "title": "5.4. Certificado SSL"
             }
           }
         ]
@@ -184,11 +184,24 @@
   },
   "active": "b848a1215792fa32",
   "lastOpenFiles": [
+    "5. Ferramentas/5.3. Senha.md",
+    "5. Ferramentas/5.4. Certificado SSL.md",
+    "5. Ferramentas/5.1. Ferramentas Online.md",
+    "5. Ferramentas/5.2. Ferramenta Offline.md",
+    "6. Nomeclatrura/6.1. Equipamento.md",
+    "6. Nomeclatrura/6.4. Chamado.md",
+    "6. Nomeclatrura/6.3. Interface.md",
+    "6. Nomeclatrura/6.2. Firewall.md",
+    "6. Nomeclatrura",
+    "5. Ferramentas/attachments/Ping.txt",
+    "5. Ferramentas/attachments/pinginfoview.zip",
+    "5. Ferramentas/attachments",
+    "Geral.md",
+    "5. Ferramentas",
     "2. Cisco/0. Inbox/Sem título.md",
     "3. Fortinet/0. Inbox/Inbox.md",
     "TCP & IP.md",
     "Ping.md",
-    "Geral.md",
     "6. Programação/Python/2. Projetos/2.12. Acessa a página de repositórios de um usuário no GitHub.md",
     "6. Programação/Python/2. Projetos/2.12..md",
     "6. Programação/Python/2. Projetos/Sem título.md",
@@ -204,14 +217,6 @@
     "6. Programação/Python/1. Bibliotecas/1.4. pandas.md",
     "6. Programação/Python/18. Tratamento de arquivo.md",
     "6. Programação/Python/18..md",
-    "6. Programação/Python/Sem título.md",
-    "6. Programação/Python/1. Bibliotecas/1.3. argparse.md",
-    "6. Programação/Python/1. Bibliotecas/1.3..md",
-    "6. Programação/Python/17. Virtualização.md",
-    "6. Programação/Python/17..md",
-    "6. Programação/Python/1. Bibliotecas/1.1. Instalação de pacotes.md",
-    "6. Programação/Python/1. Bibliotecas/1.1..md",
-    "6. Programação/Python/1. Bibliotecas/1.0. Geral.md",
     "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144451.png",
     "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144443.png",
     "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144435.png",
@@ -225,11 +230,6 @@
     "6. Programação/Python/2. Projetos",
     "6. Programação/Python/Sem título",
     "6. Programação/0. IDLE/attachments/LayoutsSpyder.png",
-    "6. Programação/0. IDLE/attachments",
-    "6. Programação/0. IDLE",
-    "6. Programação/0. ID",
-    "6. Programação/0. EDIE",
-    "6. Programação/Programação",
     "Sem título.canvas",
     "Sem título 1.canvas"
   ]

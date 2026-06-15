@@ -1,0 +1,17 @@
+Group: Computers Group 1
+192.168.0.1 Computer01
+192.168.0.2 Computer02
+192.168.0.3 Computer03
+
+Group: Computers Group 2
+192.168.0.10 Computer10
+192.168.0.11 Computer11
+192.168.0.12 Computer12
+
+Group: Computers Group 3
+192.168.1.10 Main Server
+192.168.1.11 Host 01
+192.168.1.12 Host 02
+192.168.1.30:443 HTTPS Web Site
+192.168.1.31:25 SMTP Server
+192.168.1.14 Host 03
