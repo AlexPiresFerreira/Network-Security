@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8. Protocolo/8.1. DHCP.md",
+                "file": "7. TCP & IP/7.3. Three-way Handshake.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8.1. DHCP"
+              "title": "7.3. Three-way Handshake"
             }
           }
         ]
@@ -184,9 +184,11 @@
   },
   "active": "b848a1215792fa32",
   "lastOpenFiles": [
-    "7. TCP & IP/7.4. Endereços IPs.md",
-    "8. Protocolo/8.1. DHCP.md",
+    "7. TCP & IP/attachments/image_4d3986f0-7d77-481b-951c-d3f1f34eb32820220220_192917.jpg",
+    "7. TCP & IP/attachments",
     "7. TCP & IP/TCP & IP.md",
+    "8. Protocolo/8.1. DHCP.md",
+    "7. TCP & IP/7.4. Endereços IPs.md",
     "4. RFC/IANA.md",
     "4. RFC/Site.md",
     "4. RFC/RFC para ler.md",
@@ -217,9 +219,7 @@
     "6. Programação/Python/2. Projetos/2.12..md",
     "6. Programação/Python/2. Projetos/Sem título.md",
     "6. Programação/Python/1. Bibliotecas/1.8. ctypes.md",
-    "6. Programação/Python/1. Bibliotecas/Sem título.md",
     "6. Programação/Expressões regulares",
-    "6. Programação/Sem título",
     "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144451.png",
     "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144443.png",
     "6. Programação/Python/2. Projetos/attachments/Pasted image 20260615144435.png",
