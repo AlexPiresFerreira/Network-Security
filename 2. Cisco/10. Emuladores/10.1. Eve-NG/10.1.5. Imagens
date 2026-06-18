@@ -1,0 +1,65 @@
+# Imagens
+
+### Site
+- Procedimento de instalação de imagens
+[networkhunt](https://networkhunt.com/how-to-add-eve-ng-images)
+
+--
+
+### Permissões Global para  instalar novas imagens 
+``` 
+/opt/unetlab/wrappers/unl_wrapper -a fixpermissions
+```
+
+---
+
+### Pastas
+
+#### local para colar os icones: 
+```
+/opt/unetlab/html/images/icons
+```
+
+#### Imagens
+```
+- DUNAMIPS (CISCO IOS EMULATION) .IMAGE
+/opt/unetlab/addons/dynamips
+
+- IOL (IOS ON LINUX ALSO KNOWN AS IOU) .BIN
+/opt/unetlab/addons/iol/bin
+      - Gerar a licença da IOL
+```
+- python3 CiscoIOUKeygen.py
+- Copiar a licença => Nome da maquina = licença e editar o iourc
+```
+
+- QEMU (GUANDE MAIORIA DAS IMAGENS) .QCOW2
+/opt/unetlab/addons/qemu
+```
+
+### IOS recomendada 
+	- L2-ADVENTERPRISEK9-M-15.2-IRON-20151103.bin
+	- L3-ADVENTERPRISEK9-M-15.4-2T.bin
+ 
+#### Renomear 
+	- L2-ADVENTERPRISEK9-M-15.2-IRON-20151103.bin --> iol-switch
+	- L3-ADVENTERPRISEK9-M-15.4-2T.bin --> iol-roteador
+
+### Converter
+
+- CONVERTER VMDK PARA QOW2
+```
+cd /opt/unetlab/addons/qemu/xxxx
+qemu-img convert -f vmdk -O qcow2 *.vmdk hda.qcow2
+```
+
+- CONVERTER QOW2 PARA VMDK
+```
+cd /opt/unetlab/addons/qemu/xxxx
+/opt/qemu/bin/qemu-img convert -f qcow2 *.qcow2 -O vmdk xxx.vmdk
+```
+
+- COMPACTAR IMAGEM
+```
+qemu-img convert -c -f qcow2 -O qcow2 hda.qcow2 hda2.qcow2 
+```
