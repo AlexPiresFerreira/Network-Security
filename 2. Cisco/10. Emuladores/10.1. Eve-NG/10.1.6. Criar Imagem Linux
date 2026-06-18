@@ -1,0 +1,30 @@
+# Criar Imagem Linux
+
+### Pasta e IOS
+  - Criar pasta "linux-XXXXX-YYYY"
+  - Salvar ISO na pasta "linux-XXXXX-YYYY", com o nome cdrom
+
+### Criar HD 
+	/opt/qemu/bin/qemu-img create -f qcow2 virtioa.qcow2 40G
+	
+### Executar a imagem nova em um lab 
+  - Instalar o linux
+  - Pausar a maquina 
+
+### Pegar as informações 
+  - 1 - ID user eve 
+  - 2 - ID lab
+  - 3 - ID linux
+
+### Acessar a pasta 
+```
+/opt/unetlab/tmp/< ID user eve>/< ID lab>/< ID linux>
+  Ex.: /opt/unetlab/tmp/0/16f6c035-567f-4ead-97c4-5952a146cdc5/3
+```
+
+### Executar o comando 
+```
+/opt/qemu/bin/qemu-img commit virtioa.qcow2
+```
+
+### Se criou certo vai gerar a seguinte saida
