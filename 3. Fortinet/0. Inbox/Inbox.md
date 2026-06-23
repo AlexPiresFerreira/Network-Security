@@ -141,4 +141,5 @@ teste
 	- https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/216765/implicit-**rule
  - FSSO requisito de usuario
 	- https://community.fortinet.com/fortigate-3/technical-tip-restricting-a-fortinet-single-sign-on-agent-service-fsso-service-account-99528
-	
+ - Verificação da licença
+	- https://community.fortinet.com/fortigate-3/technical-tip-how-to-view-license-details-via-cli-and-gui-95031 
