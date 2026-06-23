@@ -139,4 +139,6 @@ teste
 	- https://www.peibuf.com.br/post/sd-wan-rule-select-outgoing-interface-strategy
 	- https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/683285/selecting-the-implicit-sd-wan-algorithm
 	- https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/216765/implicit-**rule
+ - FSSO requisito de usuario
+	- https://community.fortinet.com/fortigate-3/technical-tip-restricting-a-fortinet-single-sign-on-agent-service-fsso-service-account-99528
 	
