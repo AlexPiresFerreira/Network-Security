@@ -143,3 +143,5 @@ teste
 	- https://community.fortinet.com/fortigate-3/technical-tip-restricting-a-fortinet-single-sign-on-agent-service-fsso-service-account-99528
  - Verificação da licença
 	- https://community.fortinet.com/fortigate-3/technical-tip-how-to-view-license-details-via-cli-and-gui-95031 
+- dpi inspeçao de segurança
+- 
