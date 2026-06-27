@@ -139,6 +139,77 @@ teste
 	- https://www.peibuf.com.br/post/sd-wan-rule-select-outgoing-interface-strategy
 	- https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/683285/selecting-the-implicit-sd-wan-algorithm
 	- https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/216765/implicit-**rule
+	- https://weberblog.net/cli-commands-for-troubleshooting-fortigate-firewalls/
+	- https://docs.fortinet.com/document/fortigate/7.6.7/cli-reference/84566
+	- https://infosecmonkey.com/troubleshooting-nat-on-fortigate-firewall/
+	- https://community.fortinet.com/fortigate-3/technical-tip-how-to-use-a-vip-s-external-ip-address-for-source-nat-when-central-nat-is-disabled-92685
+	- https://community.fortinet.com/fortigate-3/technical-tip-how-to-reset-a-fortigate-with-the-default-factory-settings-without-losing-management-access-98538
+	- https://community.fortinet.com/fortigate-3/technical-tip-enable-and-disable-vdom-admin-98181
+	- https://docs.fortinet.com/document/fortigate/7.6.7/administration-guide/218559
+	- https://community.fortinet.com/fortigate-3/technical-tip-verify-the-matching-policy-route-93265
+	- https://community.fortinet.com/fortigate-3/technical-tip-diagnosing-dhcp-on-a-fortigate-95241
+	- https://community.fortinet.com/fortigate-3/technical-tip-ensuring-ipsec-traffic-is-offloaded-for-improved-throughput-95690
+	- https://socpuppet.blogspot.com/2015/02/esp-replay-window-enabling-disable.htm
+	- https://networkinterview.com/ipsec-vpn-configuration-fortigate-firewall/
+	- https://docs.fortinet.com/document/fortianalyzer/7.2.3/cli-reference/975249
+	- https://docs.fortinet.com/document/fortianalyzer/7.2.3/cli-reference/431255/cli-command-syntax
+	- https://community.fortinet.com/fortigate-3/technical-tip-how-to-configure-source-ip-for-secure-sd-wan-performance-sla-99911
+	- https://yurisk.info/2021/03/14/Fortigate-Firewalls-Hardware-CPU-model-and-number-Memory-size-datasheet-table/
+	- https://docs.fortinet.com/document/fortigate/7.4.1/administration-guide/985659/advpn-and-shortcut-paths
+	- https://layer3life.wordpress.com/2022/02/26/fortinet-sdwan-auto-discovery-vpn-advpn/
+	- https://sharifulhoque.blogspot.com/2019/07/in-depth-look-at-fortigates-advpn-part.html?m=1
+	- https://www.fortinet.com/br/corporate/about-us/newsroom/press-releases/2023/fortinet-simplifies-zero-trust-access-with-zta-for-dummies
+	- https://docs.fortinet.com/document/fortigate/7.2.4/administration-guide/426761/site-to-site-vpn-with-overlapping-subnets
+	- https://community.fortinet.com/fortigate-3/technical-tip-using-dtls-to-improve-ssl-vpn-performance-96012
+	- https://www.fortinet.com/br/resources/icon-library
+	- https://community.fortinet.com/fortigate-3/technical-tip-how-to-configure-dns-suffix-for-ssl-vpn-and-ipsec-vpn-on-fortigate-96737
+	- https://docs.fortinet.com/document/fortigate/7.0.2/cli-reference/448620/config-log-syslogd-setting
+	- https://docs.fortinet.com/document/fortigate/7.4.2/administration-guide/922096/inspection-mode-feature-comparison
+	- https://community.fortinet.com/support-forum-92/resolving-internal-hostnames-what-is-the-best-practice-for-dns-settings-fortigate-60e-65051?postid=65051#post65051
+	- https://community.fortinet.com/fortigate-3/technical-tip-how-to-check-interface-bandwidth-utilization-from-gui-96554
+	- https://docs.fortinet.com/document/fortimanager/7.2.0/policy-analyzer-1-0-0-beta-administration-guide/893031/adding-fortigate-to-fortimanager
+	- https://docs2.fortinet.com/document/fortimanager/7.0.7/administration-guide/512210/setting-up-fortimanager
+	- https://docs.fortinet.com/document/fortigate/7.2.4/administration-guide/697989/configuring-central-management
+	- https://docs2.fortinet.com/document/fortimanager/7.0.7/administration-guide/148045/ipsec-vpn-communities
+	- https://docs.fortinet.com/document/fortigate/7.4.1/administration-guide/327890/deploying-the-security-fabric
+	- https://docs.fortinet.com/document/fortigate/7.0.0/ztna-architecture/41392/design-topology
+	- https://docs.fortinet.com/document/fortigate/7.2.0/sd-wan-architecture-for-enterprise/531289/design-principles
+	- https://community.fortinet.com/members/ndawedua-3573
+	- https://docs.fortinet.com/document/fortigate/7.2.0/new-features/7398/permanent-trial-mode-for-fortigate-vm-7-2-1
+	- https://community.fortinet.com/fortigate-3/technical-tip-recommended-release-for-fortios-116639
+	- https://community.fortinet.com/fortigate-3/technical-tip-email-two-factor-authentication-on-fortigate-96851
+	- https://docs.fortinet.com/document/fortigate-private-cloud/7.2.0/kvm-administration-guide/504166
+	- https://community.fortinet.com/fortigate-3/technical-tip-how-to-use-udp-protocol-for-fortiguard-web-filter-and-anti-spam-services-94359
+	- https://community.fortinet.com/fortigate-3/technical-tip-displaying-logs-via-fortigate-s-cli-95301
+	- https://community.fortinet.com/fortigate-3/troubleshooting-tip-fqdn-address-object-shows-unresolved-in-gui-after-upgrading-to-fortios-v7-2-6-or-v7-2-7-147000
+	- https://docs.fortinet.com/document/fortigate/7.4.4/administration-guide/771644/dos-policy
+	- https://docs.fortinet.com/document/fortigate-public-cloud/7.6.0/azure-administration-guide/584456/configuring-saml-sso-login-for-ssl-vpn-with-entra-id-acting-as-saml-idp
+	- https://community.fortinet.com/fortigate-3/technical-tip-prevent-malicious-ip-addresses-from-accessing-ssl-vpn-with-brute-force-attacks-on-fortigate-142581
+	- https://docs.fortinet.com/document/fortimanager/7.4.0/mass-provisioning-using-fortimanager/271795/connect-branch-fortigates-to-fortimanager
+	- https://community.fortinet.com/fortigate-3/troubleshooting-tip-create-on-fabric-detection-rule-in-ems-to-differentiate-between-off-fabric-and-on-fabric-endpoints-150945
+	- https://community.fortinet.com/fortigate-3/troubleshooting-tip-ipsec-vpn-tunnels-97751
+	- https://docs.fortinet.com/document/fortigate/7.0.0/new-features/508779/fortigate-as-ssl-vpn-client
+	- https://community.fortinet.com/fortigate-3/technical-tip-use-fortigate-automation-stitches-for-alert-emails-95572
+	- https://community.fortinet.com/fortigate-3/troubleshooting-tip-unable-to-connect-to-fortiguard-servers-116050
+	- https://community.fortinet.com/fortigate-3/technical-tip-subscribe-to-rss-feeds-for-alerts-on-new-fortinet-firmware-releases-130966
+	- https://docs.fortinet.com/document/fortigate/7.6.0/fortios-log-message-reference/671442/cef-priority-levels
+	- https://community.fortinet.com/fortigate-3/troubleshooting-tip-action-client-rst-in-the-traffic-log-description-177096
+	- https://community.fortinet.com/fortigate-3/technical-tip-upgrading-fsso-agents-94348
+	- https://training.fortinet.com/local/library/?category=Certification:Purchase_Exam_Vouchers
+	- https://global.fortinet.com/lp-en-nse-1million
+	- https://global.fortinet.com/ai-lp-pt-wc-fast-tracks-upcoming-2025?elqTrackId=16DC31460BABDDF65A213FEFD2B8A884&elq=00000000000000000000000000000000&elqaid=8608&elqat=2&elqCampaignId=&elqak=8AF5DC92DD40C37614E983202A13155D3DF6CFD00E099E945E80206FD410B7DDF3A6
+	- https://github.com/FortiPower/PowerFGT
+	- https://docs.fortinet.com/document/fortigate/7.0.15/administration-guide/042181/dns-over-tls-and-https
+	- https://blog.idtecnologia.com.br/como-criar-vpn-ipsec-do-pfsense-para-fortigate/
+	- https://community.fortinet.com/
+	- https://docs.fortinet.com/document/forticlient/7.2.0/new-features/712604/ipsec-vpn-saml-based-authentication-7-2-4
+	- https://docs.fortinet.com/document/fortigate/7.6.1/administration-guide/254248/configuring-saml-sso
+	- https://techcyber.blog/ssl-inspection-certificate-inspection-vs-deep-inspection
+	- https://github.com/yuriskinfo/cheat-sheets/blob/master/cheat-sheets/Fortigate-debug-diagnose-complete-cheat-sheet.adoc
+	- https://docs.fortinet.com/document/forticlient/7.2.13/ems-administration-guide/439480/required-services-and-ports
+	- https://packetpass.com.br/nse4
+	- https://www.peibuf.com.br/post/fast-post-mfa-free-to-liso
+	- https://www.youtube.com/watch?v=iokflrXaGrs
  - FSSO requisito de usuario
 	- https://community.fortinet.com/fortigate-3/technical-tip-restricting-a-fortinet-single-sign-on-agent-service-fsso-service-account-99528
  - Verificação da licença
