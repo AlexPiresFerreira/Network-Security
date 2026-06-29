@@ -1,15 +1,16 @@
+
 ## Arquivos locais / notas do Obsidian
 
 - [Fortinet.xlsm](attachments/Fortinet.xlsm)
 - [Workshop_SD-WAN_Fortimanage.pdf](attachments/Workshop_SD-WAN_Fortimanage.pdf)
-- [FortiAnalyzer5210ReportTroubleshootingGuide.pdf](attachments/FortiAnalyzer5210ReportTroubleshootingGuide.pdf)
-- [FortiAnalyzerBestPracticesGuide.pdf](attachments/FortiAnalyzerBestPracticesGuide.pdf)
-- [fortianalyzerdebugcheatsheet.pdf](attachments/fortianalyzerdebugcheatsheet.pdf)
-- [Debug_FortiOS.xml](attachments/Debug_FortiOS.xml)
-- [Cisco_IOS_byLuisPisco.xml](attachments/Cisco_IOS_byLuisPisco.xml)
-- [Fortinet_FortiOS_FGT_by_DPBarbosa.xml](attachments/Fortinet_FortiOS_FGT_by_DPBarbosa.xml)
-- [FortiOS.xml](attachments/FortiOS.xml)
-- [RPL HP language Notepad++.xml](attachments/RPL_HP_language_Notepad++.xml)
+- [FortiAnalyzer5210ReportTroubleshootingGuide.pdf](https://app.innerai.com/attachments/FortiAnalyzer5210ReportTroubleshootingGuide.pdf)
+- [FortiAnalyzerBestPracticesGuide.pdf](https://app.innerai.com/attachments/FortiAnalyzerBestPracticesGuide.pdf)
+- [fortianalyzerdebugcheatsheet.pdf](https://app.innerai.com/attachments/fortianalyzerdebugcheatsheet.pdf)
+- [Debug_FortiOS.xml](https://app.innerai.com/Debug_FortiOS.xml)
+- [Cisco_IOS_byLuisPisco.xml](https://app.innerai.com/Cisco_IOS_byLuisPisco.xml)
+- [Fortinet_FortiOS_FGT_by_DPBarbosa.xml](https://app.innerai.com/Fortinet_FortiOS_FGT_by_DPBarbosa.xml)
+- [FortiOS.xml](https://app.innerai.com/FortiOS.xml)
+- [RPL HP language Notepad++.xml](https://app.innerai.com/RPL_HP_language_Notepad++.xml)
 
 ## FortiManager / FortiAnalyzer / Security Fabric
 
@@ -143,4 +144,3 @@
 - [Community member profile](https://community.fortinet.com/members/ndawedua-3573)
 - [Fortinet icon library](https://www.fortinet.com/br/resources/icon-library)
 - [Fortinet ZTA for Dummies](https://www.fortinet.com/br/corporate/about-us/newsroom/press-releases/2023/fortinet-simplifies-zero-trust-access-with-zta-for-dummies)
-
