@@ -210,6 +210,18 @@ teste
 	- https://packetpass.com.br/nse4
 	- https://www.peibuf.com.br/post/fast-post-mfa-free-to-liso
 	- https://www.youtube.com/watch?v=iokflrXaGrs
+	- https://community.fortinet.com/fortigate-3/technical-tip-configuring-fortigate-ha-and-bgp-graceful-restart-to-avoid-traffic-interruption-during-an-ha-failover-97911
+	- https://docs.fortinet.com/document/fortigate-public-cloud/7.2.0/azure-administration-guide/425289/configuring-integration-with-azure-ad-domain-services-for-vpn
+	- https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/351998/creating-automation-stitches
+	- https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/122078/deep-inspection
+	- https://community.fortinet.com/fortigate-3/troubleshooting-tip-dns-filter-rating-server-unreachable-144668
+	- https://community.fortinet.com/fortigate-3/technical-tip-formatting-and-loading-fortigate-firmware-image-using-tftp-99151
+	- https://community.fortinet.com/fortigate-3/technical-tip-how-to-secure-and-limit-an-ssl-vpn-unknown-user-login-brute-force-attack-114822
+	- https://community.fortinet.com/fortigate-3/technical-tip-link-monitor-explained-99053
+	- https://community.fortinet.com/fortigate-3/technical-tip-setting-up-a-vip-load-balance-with-http-host-check-in-http-header-99704
+	- https://community.fortinet.com/fortigate-3/technical-tip-sla-logging-93508
+	- https://community.fortinet.com/support-forum-92/ssl-vpn-dual-interface-108707
+	- https://community.fortinet.com/fortigate-3/technical-tip-web-filter-is-not-blocking-websites-on-google-chrome-and-microsoft-edge-158103
  - FSSO requisito de usuario
 	- https://community.fortinet.com/fortigate-3/technical-tip-restricting-a-fortinet-single-sign-on-agent-service-fsso-service-account-99528
  - Verificação da licença
