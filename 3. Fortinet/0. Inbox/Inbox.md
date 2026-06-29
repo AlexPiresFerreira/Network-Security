@@ -143,4 +143,3 @@
 - [Community member profile](https://community.fortinet.com/members/ndawedua-3573)
 - [Fortinet icon library](https://www.fortinet.com/br/resources/icon-library)
 - [Fortinet ZTA for Dummies](https://www.fortinet.com/br/corporate/about-us/newsroom/press-releases/2023/fortinet-simplifies-zero-trust-access-with-zta-for-dummies)
-
