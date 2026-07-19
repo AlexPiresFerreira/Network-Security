@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12. Emuladores/10.1. Eve-NG/10.1.4. Configuração Linux.md",
+                "file": "12. Emuladores/10.1. Eve-NG/10.1.5. Imagens.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10.1.4. Configuração Linux"
+              "title": "10.1.5. Imagens"
             }
           }
         ]
@@ -184,6 +184,9 @@
   },
   "active": "b848a1215792fa32",
   "lastOpenFiles": [
+    "12. Emuladores/10.1. Eve-NG/10.1.4. Configuração Linux.md",
+    "12. Emuladores/10.1. Eve-NG/10.1.3. VMWare.md",
+    "12. Emuladores/10.1. Eve-NG/10.1.1. Geral.md",
     "5. Ferramentas/5.1. Ferramentas Online.md",
     "teste/teste.md",
     "teste",
@@ -210,12 +213,9 @@
     "12. Emuladores/10.1. Eve-NG/attachments/IDlab2.png",
     "12. Emuladores/10.1. Eve-NG/attachments/IDlab.png",
     "12. Emuladores/10.1. Eve-NG/attachments",
-    "12. Emuladores/10.1. Eve-NG/10.1.3. VMWare.md",
     "12. Emuladores/10.1. Eve-NG/10.1.6. Criar Imagem Linux.md",
     "12. Emuladores/10.1. Eve-NG/10.1.5. Imagens.md",
-    "12. Emuladores/10.1. Eve-NG/10.1.4. Configuração Linux.md",
     "12. Emuladores/10.1. Eve-NG/10.1.2. Erro.md",
-    "12. Emuladores/10.1. Eve-NG/10.1.1. Geral.md",
     "12. Emuladores/10.1. Eve-NG",
     "12. Emuladores",
     "11. Huawie/11.3. Configuração/11.3.9. RIP.md",
