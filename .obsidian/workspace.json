@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5. Ferramentas/5.1. Ferramentas Online.md",
+                "file": "12. Emuladores/10.1. Eve-NG/10.1.4. Configuração Linux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.1. Ferramentas Online"
+              "title": "10.1.4. Configuração Linux"
             }
           }
         ]
@@ -184,8 +184,8 @@
   },
   "active": "b848a1215792fa32",
   "lastOpenFiles": [
-    "teste/teste.md",
     "5. Ferramentas/5.1. Ferramentas Online.md",
+    "teste/teste.md",
     "teste",
     "3. Fortinet/0. Inbox/Inbox.md",
     "attachments/RPL_HP_language_Notepad++.xml.md",
