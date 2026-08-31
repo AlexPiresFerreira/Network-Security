@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12. Emuladores/10.1. Eve-NG/10.1.5. Imagens.md",
+                "file": "14. Treinamento/Telecom/14.1 Fundamentos de Equipamentos, Arquitetura Hierárquica e Segurança de Redes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10.1.5. Imagens"
+              "title": "14.1 Fundamentos de Equipamentos, Arquitetura Hierárquica e Segurança de Redes"
             }
           }
         ]
@@ -168,7 +168,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,6 +186,10 @@
   },
   "active": "b848a1215792fa32",
   "lastOpenFiles": [
+    "14. Treinamento/Telecom",
+    "Sem título/desktop.ini",
+    "14. Treinamento",
+    "12. Emuladores/10.1. Eve-NG/10.1.5. Imagens.md",
     "attachments/populadaMAC.png",
     "attachments/TabelaMAC.png",
     "attachments/SwitchFundamentais.png",
@@ -192,7 +197,7 @@
     "attachments/Router.png",
     "attachments/HUB.png",
     "attachments/Firewall.png",
-    "14. Treinamento.md",
+    "14. Treinamento/Telecom/14.1 Fundamentos de Equipamentos, Arquitetura Hierárquica e Segurança de Redes.md",
     "13. Troubleshooting/13.2. Integração de Threat Feed do GitHub com FortiGate.md",
     "13. Troubleshooting/13.1. Portal VPN Fortigate para Linux SSH.md",
     "13. Troubleshooting",
@@ -207,7 +212,6 @@
     "3. Fortinet/0. Inbox/attachments/RPL_HP_language_Notepad++.xml",
     "3. Fortinet/0. Inbox/attachments/Workshop_SD-WAN_Fortimanage.pdf",
     "Sem título.md",
-    "Sem título",
     "3. Fortinet/2. Geral/2.1 Links.md",
     "5. Ferramentas/5.2. Ferramenta Offline.md",
     "5. Ferramentas/5.5. Clientes de terminal..md",
@@ -221,16 +225,13 @@
     "12. Emuladores/10.1. Eve-NG/attachments/Saida.png",
     "12. Emuladores/10.1. Eve-NG/attachments/IDuserEve2.png",
     "12. Emuladores/10.1. Eve-NG/attachments/IDuserEve.png",
-    "12. Emuladores/10.1. Eve-NG/attachments/IDlinux.png",
     "12. Emuladores/10.1. Eve-NG/attachments",
     "12. Emuladores/10.1. Eve-NG/10.1.6. Criar Imagem Linux.md",
-    "12. Emuladores/10.1. Eve-NG/10.1.5. Imagens.md",
     "12. Emuladores/10.1. Eve-NG/10.1.2. Erro.md",
     "12. Emuladores/10.1. Eve-NG",
     "12. Emuladores",
     "11. Huawie/11.3. Configuração/11.3.9. RIP.md",
     "11. Huawie/11.3. Configuração",
-    "11. Huawie",
     "Sem título.canvas",
     "Sem título 1.canvas"
   ]
