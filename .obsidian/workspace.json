@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "15. Automação/14.2 Script.md",
+                "file": "15. Automação/14.1 Geral.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "14.2 Script"
+              "title": "14.1 Geral"
             }
           }
         ]
@@ -186,8 +186,8 @@
   },
   "active": "b848a1215792fa32",
   "lastOpenFiles": [
-    "15. Automação/14.1 Geral.md",
     "15. Automação/14.2 Script.md",
+    "15. Automação/14.1 Geral.md",
     "14. Treinamento/Telecom/14.1 Fundamentos de Equipamentos, Arquitetura Hierárquica e Segurança de Redes.md",
     "15. Automação",
     "14. Treinamento/Telecom",
