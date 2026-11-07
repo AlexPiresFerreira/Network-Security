@@ -21,6 +21,10 @@ Uma VLAN permite segmentar uma rede de camada 2 em domínios de broadcast distin
 - Uma interface física pode transportar várias VLANs, desde que cada subinterface use a configuração de VLAN correspondente.
 - Cada subinterface VLAN pode ter configurações próprias, como endereço IP, role e, quando aplicável, servidor DHCP.
 
+## VLAN Default 
+
+- VLAN ID 0
+
 ## Criar uma interface VLAN
 
 Ao configurar uma VLAN, defina:

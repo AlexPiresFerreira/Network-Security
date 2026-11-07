@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3. Fortinet/3. Configuração - FortiGate/3.1.20 VDOM.md",
+                "file": "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/313_VLANs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.1.20 VDOM"
+              "title": "313_VLANs"
             }
           }
         ]
@@ -186,10 +186,12 @@
   },
   "active": "b848a1215792fa32",
   "lastOpenFiles": [
-    "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/315_VDOM.md",
-    "3. Fortinet/3. Configuração - FortiGate/3.1.20 VDOM.md",
-    "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/319_FortiGuard_Distribution_Network_FDN.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/318_Upgrade.md",
+    "5. Ferramentas/5.2. Ferramenta Offline.md",
+    "5. Ferramentas/5.1. Ferramentas Online.md",
+    "3. Fortinet/3. Configuração - FortiGate/3.1.20 VDOM.md",
+    "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/315_VDOM.md",
+    "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/319_FortiGuard_Distribution_Network_FDN.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/317_Backup_e_restore.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/312_DHCP.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/311_Acesso_inicial_e_administracao.md",
@@ -211,9 +213,7 @@
     "3. Fortinet/3. Configuração - FortiGate/3.1.1. Netflow.md",
     "3. Fortinet/2. Geral/02_Acesso-e-Console.md",
     "16. Syslog/Sistema.md",
-    "2. Cisco/2. Geral/2.1 Links.md",
     "16. Syslog",
-    "15. Automação/14.1 Geral.md",
     "15. Automação",
     "14. Treinamento/Telecom",
     "Sem título/desktop.ini",
