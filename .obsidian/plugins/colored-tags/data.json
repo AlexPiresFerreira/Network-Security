@@ -442,7 +442,11 @@
     "snat": 430,
     "dnat": 431,
     "ip-pool": 432,
-    "vip": 433
+    "vip": 433,
+    "autenticacao-local": 434,
+    "2fa": 435,
+    "fortitoken": 436,
+    "otp": 437
   },
   "_version": 3
 }
