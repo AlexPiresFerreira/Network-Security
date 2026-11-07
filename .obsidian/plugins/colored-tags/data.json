@@ -421,7 +421,23 @@
     "uptime": 409,
     "estatistica": 410,
     "MBA": 411,
-    "USP": 412
+    "USP": 412,
+    "acesso-inicial": 413,
+    "vlan": 414,
+    "camada-2": 415,
+    "segmentacao": 416,
+    "roteamento": 417,
+    "ospf": 418,
+    "bgp": 419,
+    "vdom": 420,
+    "backup": 421,
+    "restore": 422,
+    "fortios": 423,
+    "upgrade": 424,
+    "firmware": 425,
+    "fortiguard": 426,
+    "fdn": 427,
+    "atualizacoes": 428
   },
   "_version": 3
 }
