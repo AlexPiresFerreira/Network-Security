@@ -1,442 +1,283 @@
-
-## 1. Conceito de Firewall Policy
-
-- Política define:
-    - **Que tráfego dá match** (interfaces, origem, destino, serviço, horário).
-    - **O que fazer** com esse tráfego (ACCEPT/DENY, perfis de segurança, NAT, autenticação).
-- Avaliação:
-    - Ordem **top‑down**: começa da primeira policy e para na **primeira que casar**.
-    - Se nenhuma casar → **regra implícita** (Implicit Deny) derruba tudo.
-- Após o match:
-    - Decide se **permite ou nega**.
-    - Se permite, aplica perfis UTM (AV, Web Filter, etc.), NAT e eventualmente autenticação.
-
+---
+id: 202611071101
+tipo: conceito
+tema: FortiGate
+tags:
+  - fortinet
+  - fortigate
+  - firewall-policy
+  - seguranca
+  - logging
 ---
 
-## 2. Componentes usados em políticas
-
-- **Interfaces/Zonas** (incoming / outgoing).
-- **Address objects** (IPs, subnets, FQDN, GeoIP, dynamic address).
-- **Users / User groups** (locais, AD/LDAP/Radius, FSSO).
-- **Internet Services / ISDB** (serviços conhecidos – Microsoft, Google etc.).
-- **Services** (TCP/UDP/SCTP, ICMP, IP; portas, ranges, tipo/código).
-- **Schedule** (Always ou horários específicos).
-- **Security Profiles** (AV, Web/DNS Filter, App Control, IPS, SSL Inspection, etc.).
-
----
-
-## Ordem da verificação da policy 
-
-- **Interfaces de entrada e saída**
-- **Origem:** endereço IP, usuário ou serviço de Internet
-- **Destino:** endereço IP ou serviço de Internet
-- **Serviços**
-- **Agendamentos**
-- **Ação:** **ACCEPT** (permitir) ou **DENY** (negar)
-
-## 3. Tipos de políticas
-
-- **Firewall Policy (IPv4/IPv6)** – política “normal” de L3/L4.
-- **Virtual Wire Pair Policy** – controla tráfego entre interfaces em virtual wire.
-- **Proxy Policy** – usada para tráfego HTTP/HTTPS em proxy com inspeção avançada.
-- **Multicast Policy** – controla tráfego multicast.
-- **Local‑in Policy** – controla tráfego destinado ao próprio FortiGate (admin, VPN, etc.).
-- **DoS Policy** – protege contra ataques de negação de serviço.
-- **Traffic Shaping Policy** – controla banda, prioridade de tráfego.
-
----
-
-## 4. Criação e correspondência de políticas
-
-- Em GUI:
-    - Nome (único, opcional desativar exigência).
-    - **Obrigatório definir**: incoming, outgoing, source, destination, service, schedule, action.
-- Correspondência:
-    - 1º: par de **interfaces**.
-    - 2º: **origem** (endereços, usuários, GeoIP, ISDB, dynamic address, MAC range).
-    - 3º: **destino** (endereços, ISDB, GeoIP; não usa usuário).
-    - 4º: **serviço** (portas/protocolos).
-    - 5º: **schedule** (Always ou janela).
-- Múltiplas interfaces / any:
-    - Por padrão desativado na GUI, pode ser habilitado; na CLI sempre disponível.
-
----
-
-## 5. Policy List, IDs e organização
-
-- Cada policy tem **ID único**, criado na criação e que não muda ao mover.
-- Visões:
-    - **Interface Pair View** – agrupadas por par de interfaces.
-    - **Sequence View** – ordem real de processamento, com possibility de **sequence groups**.
-- Mover policies:
-    - GUI: drag‑and‑drop.
-    - CLI: comando `move`.
-- Combinação de policies:
-    - Se origem/destino iguais, pode combinar serviços em uma policy (quando fizer sentido, ex. logging similar).
-
----
-
-## 6. Security Profiles
-
-- Perfis de segurança aplicados em policies com **Action = ACCEPT**:
-    - **Antivirus**, **Web Filter**, **DNS Filter**, **Application Control**, **IPS**, **SSL Inspection**.
-- Outros perfis (ativados via Feature Visibility):
-    - **Video Filter**, **File Filter**, **Email Filter**, **VoIP**, **Web Application Firewall**, **Inline CASB**, **DLP**.
-- Ideia central:
-    - Bloquear ameaças, controlar aplicações/URLs, impedir vazamento de dados.
-
----
-
-## 7. Modos de inspeção (Flow‑based x Proxy‑based)
-
-- **Flow‑based** (padrão):
-    - Inspeção em tempo real, usa menos recursos, maior throughput.
-    - Nem todas as features avançadas disponíveis.
-- **Proxy‑based**:
-    - Bufferiza o tráfego, analisa o fluxo completo.
-    - Permite recursos avançados:
-    - quotas de Web Filter, safe search, web profile override, alguns perfis (Video Filter, Inline CASB, ICAP, WAF, DLP).
-    - Mais pesado em CPU/memória.
-- Em appliances menores (2 GB RAM ou menos), Proxy‑based pode não aparecer na GUI; habilita‑se via CLI.
-
----
-
-## 8. Logging em políticas
-
-- Por padrão:
-    - Tráfego logado apenas para eventos de **segurança (UTM)**.
-- Pode mudar para:
-    - **All Sessions** – logar toda sessão.
-- Em policies **DENY**:
-    - Só existe opção de **Log Violation Traffic**.
-- Modo de geração de logs:
-    - Default: loga quando **a sessão termina**.
-    - Opção: **Generate Logs When Session Starts** (loga no início e no fim):
-    - Aumenta uso de CPU/armazenamento → usar só quando necessário.
-    - Em appliances sem storage interno, opção aparece apenas via CLI.
-
-### Logs de bloqueio
-
-- Quando um perfil de segurança bloqueia algo, o log de ameaça é gerado na hora.
-- Para reduzir logs e carga:
-    - Habilitar `ses-denied-traffic` para registrar sessão negada na session table.
-    - Parâmetro `block-session-timer` define quanto tempo a sessão negada fica na tabela (padrão 30s).
-
-### Onde visualizar
-
-- Destinos de log:
-    - Disco/memória local, FortiGate Cloud, FortiAnalyzer (local/cloud), Syslog.
-- GUI:
-    - **Log & Report > Forward Traffic**, filtros por:
-    - origem/destino, política, período, origem de log, etc.
-- Atalho:
-    - Na Policy List, botão direito **“Show Matching Logs”** abre logs daquela policy.
-
----
-
-## 9. GEOIP, ISDB e Geo‑based ISDB
-
-- **GeoIP**:
-    - Objetos dinâmicos baseados em país/região/cidade; precisam do FortiGuard.
-    - Ex.: permitir só origem Brasil em uma policy.
-- **ISDB (Internet Service Database)**:
-    - Banco de serviços (Meta, Google, Microsoft, TeamViewer, etc.) com IP ranges, portas e protocolos.
-- **Geographic‑Based ISDB**:
-    - Combina GeoIP + ISDB: restringe serviços de internet por região geográfica.
-- Uso:
-    - Podem ser usados em **origem e destino** das policies.
-    - Referenciados por **nome** (config/CLI), não por ID.
-
----
-
-## 10. NAT – conceitos gerais
-
-- NAT = tradução de endereço IP; com tradução de porta → **PAT**.
-- Benefícios:
-    - Esconde IP real (segurança).
-    - Conserva IPv4 público (CGNAT).
-    - Permite flexibilidade de endereçamento interno.
-- Tipos:
-    - **SNAT** – traduz IP/porta de origem (configurado na Firewall Policy).
-    - **DNAT** – traduz IP/porta de destino (via **VIP**).
-    - **NAT64 / NAT46** – IPv6↔IPv4.
-    - **NAT66** – NAT só IPv6.
-
----
-
-## 11. SNAT – modos e IP Pools
-
-### 11.1 SNAT usando IP da interface de saída
-
-- Comportamento semelhante a “overload”:
-    - Vários hosts internos compartilham o **mesmo IP público** (da interface).
-    - Diferença entre sessões feita por **portas de origem**.
-- Casos:
-    - Portas diferentes → mantêm porta original no SNAT.
-    - Mesma porta → FortiGate sorteia nova porta (evitar conflito).
-
-### 11.2 IP Pools
-
-- Definem um IP único ou range para NAT de origem.
-- Em geral, IP/Range deve estar na mesma subnet da interface de saída (senão precisa de rota).
-- Tipos:
-    - **Overload** (padrão) – igual à interface, mas com IP(s) específicos.
-    - **One‑to‑One**:
-    - Um IP do pool por host interno (enquanto houver sessões).
-    - Acabando IPs → hosts novos têm tráfego dropado.
-    - **Fixed Port Range**:
-    - Cada IP público tem suas portas divididas igualmente entre hosts internos.
-    - Interessante para **CGNAT** (deterministic NAT por host).
-    - **Port Block Allocation (PBA)**:
-    - Portas do IP público são divididas em blocos de tamanho definido.
-    - FortiGate entrega blocos conforme necessidade e **loga** qual bloco cada host usa.
-    - Também muito útil para ISPs com CGNAT, pois dá rastreabilidade.
-
-### 11.3 Session Clash (Overload)
-
-- Com overload, NAT usa port translation.
-- **Session clash** ocorre quando há **port exhaustion**:
-    - Todas as portas altas para um mesmo destino estão ocupadas.
-    - Começa a reutilizar mesma porta externa para mais de uma sessão.
-- É raro (64k+ sessões para o mesmo IP), mas pode indicar malware/tráfego anômalo.
-- Diagnóstico via **debug flow**.
-
----
-
-## 12. DNAT – VIPs
-
-- No FortiGate, DNAT é implementado com **Virtual IP (VIP)**.
-- Tipo padrão: **Static NAT** (one‑to‑one), valendo tanto para:
-    - Tráfego de entrada (DNAT → IP interno).
-    - Tráfego de saída (SNAT usando IP externo do VIP).
-- Pode referenciar:
-    - IPs fixos ou **FQDN** (altere tipo para FQDN).
-- **Port Forwarding**:
-    - Mapeia IP/porta externa para IP/porta interna específicos.
-    - Permite reutilizar o mesmo IP público em vários serviços.
-
-### 12.1 Fluxos ilustrados
-
-- Conexão de entrada:
-    - Destino externo (VIP IP:porta) → traduz para IP interno:porta.
-- Conexão de saída:
-    - Host interno com IP privado → pode usar o IP do VIP como IP de saída.
-
----
-
-## 13. Policies de DENY para VIPs (match‑vip)
-
-- Problema:
-    - Policies de deny com destinos genéricos (`all`, subnets etc.) **não casam em VIPs** por padrão.
-    - Mesmo acima da policy do VIP, tráfego ao VIP continua pegando a policy de allow.
-- Soluções:
-    1. Habilitar `match-vip` na policy de deny (CLI).
-    2. Usar o **próprio VIP** como destino na policy de deny.
-- Mudança de comportamento:
-    - A partir do **FortiOS 7.2.4**, novas policies de **Deny** vêm com `match-vip enable` por padrão (antes era `disable`).
-
----
-
-## 14. ARP Reply em VIPs
-
-- Por padrão, **ARP Reply está habilitado** nos VIPs:
-    - FortiGate responde ARP pelo IP externo do VIP.
-- Na maioria dos cenários não é estritamente necessário, mas:
-    - Ajuda a resolver problemas de **roteamento incorreto** em ambientes de ISP.
-    - É considerada **boa prática** manter ARP Reply ligado.
-
----
-
-## 15. Boas práticas (Policies & NAT)
-
-- **Policies**:
-    
-    - Sempre fazer **backup** antes de alterações.
-    - Testar mudanças em **janela de manutenção**.
-    - Se possível, testar com poucos usuários/IPs primeiro.
-    - Cuidado ao editar/desativar/deletar policies/objetos:
-    - Mudanças são aplicadas imediatamente.
-    - Sessões ativas são reavaliadas → pode gerar pico de CPU/memória.
-    - Criar policies **o mais específicas possível**:
-    - Origem/destino/serviço bem definidos.
-    - Usar subnets corretas (sem “atalhos” como /16 muito amplo).
-    - Configurar adequadamente:
-    - Perfis UTM
-    - Logging (All / UTM / None) para cada policy.
-- **NAT (SNAT/DNAT)**:
-    
-    - Conferir duas vezes **intervalos de IP Pool** (start/end).
-    - Garantir que IPs do pool **não conflitam** com IPs do FortiGate nem de outros dispositivos.
-    - Se usuários internos e externos acessam o mesmo servidor:
-    - Configurar **DNS interno** para resolver para IP interno (evita hairpin NAT desnecessário).
-    - Evitar VIPs desnecessários:
-    - Só expor para internet o que for realmente preciso.
-    - Fazer mudanças de NAT sempre em **janela de manutenção** e com testes adequados:
-    - Configuração errada pode derrubar a rede.
-
-**Ideia central:** explicar o que é uma firewall policy no FortiGate, tipos de políticas, como o tráfego dá match, como configurar e boas práticas, incluindo modos de inspeção, logging, GeoIP/ISDB e NAT (SNAT/DNAT).
-
-### 1. Conceito e tipos de Firewall Policies
-
-- Firewall policy responde:
-    - **Que tráfego casa com a regra** (interfaces, origem, destino, serviço, horário).
-    - **O que fazer** com esse tráfego (ACCEPT/DENY, perfis de segurança, NAT, autenticação, logging).
-- Avaliação das policies é **top‑down**, com **Implicit Deny** no final.
-- Tipos principais:
-    - **IPv4/IPv6 policy** (tráfego normal).
-    - **Virtual Wire Pair policy** (entre interfaces emparelhadas).
-    - **Proxy policy** (HTTP/HTTPS com inspeção profunda).
-    - **Multicast policy**.
-    - **Local‑in policy** (tráfego destinado ao próprio FortiGate: admin, VPN, BGP, etc.).
-    - **DoS policy** (proteção contra ataques de negação de serviço).
-    - **Traffic shaping policy** (QoS / controle de banda).
-
-### 2. Componentes de uma policy
-
-- Campos obrigatórios:
-    - **Incoming interface** e **Outgoing interface**.
-    - **Source** (IP/subnet, range, FQDN, GeoIP, endereço dinâmico, MAC range, usuário/grupo, ISDB).
-    - **Destination** (IP/subnet, FQDN, GeoIP, ISDB – mas **não** usuário).
-    - **Service** (TCP/UDP/SCTP/ICMP, portas origem/destino, tipo/código).
-    - **Schedule** (Always ou janelas de tempo).
-    - **Action** (ACCEPT ou DENY).
-- Opções de UI:
-    - Possível habilitar **“Allow unnamed policies”** e **“Multi‑interfaces policies”** em _Feature Visibility_.
-    - Visões da lista de policies:
-    - **Interface pair view** (agrupadas por par de interfaces).
-    - **By sequence** (ordem real de processamento).
-
-### 3. Security Profiles (UTM/NGFW)
-
-- Só são usados em policies com **ACCEPT**.
-- Principais:
-    - **Antivirus**, **Web Filter**, **DNS Filter**, **Application Control**, **IPS**, **SSL Inspection**.
-- Perfis adicionais (ativados em Feature Visibility):
-    - **Video Filter, File Filter, Email Filter, VoIP, Web Application Firewall, Inline CASB, DLP**, etc.
-- Dois **modos de inspeção**:
-    - **Flow‑based**: inspeção em tempo real, melhor performance, menos recursos.
-    - **Proxy‑based**: bufferiza tráfego, permite features avançadas (quota, safe‑search, overrides, WAF, DLP), consome mais recursos; em appliances pequenos pode precisar habilitar via CLI.
-
-### 4. Logging
-
-- Em ACCEPT:
-    - **UTM** (default): loga só eventos ligados a perfis de segurança.
-    - **ALL**: loga todas as sessões.
-- Em DENY:
-    - Só opção **“Log violation traffic”** (off por default).
-- Opção **“Generate logs when session starts”**:
-    - Cria log na abertura e no fechamento da sessão (dobro de logs; mais CPU/armazenamento).
-- Logs podem ser enviados para: **disco local, memória, FortiCloud, FortiAnalyzer, syslog**.
-- Visualização:
-    - **Forward Traffic** (tráfego) e **Security Events** (antivírus, webfilter, etc.).
-    - Atalho **“Show Matching Logs”** a partir da policy.
-
-### 5. GeoIP, ISDB e Geo‑based ISDB
-
-- **GeoIP**: objeto de endereço que representa um país/região; FortiGate consulta FortiGuard.
-- **ISDB (Internet Service Database)**:
-    - Objetos dinâmicos com ranges de IP/port/protocol de serviços (Google, Microsoft, Meta, etc.).
-- **Geo‑based ISDB**:
-    - Combina serviço + região (ex.: Teams BR/RS/Porto Alegre).
-- Necessitam de **licença FortiGuard** atualizada; aparecem nas policies como origem/destino ou _Internet Service_.
-
-### 6. NAT – visão geral
-
-- **NAT**: tradução de IP; com portas → **PAT**.
-- Tipos:
-    - **SNAT (Source NAT)**: traduz IP/porta de origem. Configurado na **policy** (campo NAT).
-    - **DNAT (Destination NAT)**: traduz IP/porta de destino. Configurado via **VIP** (Virtual IP).
-    - **NAT64/NAT46/NAT66**: tradução envolvendo IPv6.
-
-#### 6.1 SNAT com IP da interface x IP Pools
-
-- Opções na policy:
-    - **Use outgoing interface address**: usa IP da própria interface WAN (equivale a overload).
-    - **IP Pool**: usa um ou mais IPs configurados (pool).
-- Funciona via **port translation**; FortiGate mantém tabela de sessão ligando IP/porta interna ↔ externa.
-- Possíveis problemas:
-    - **Port exhaustion / session clash** quando muitas sessões para o mesmo destino.
-    - Comandos de debug: `diagnose sys session stat` (campo `clash`), `diagnose sys session list`.
-
-#### 6.2 Tipos de IP Pool
-
-- **Overload** (default): vários hosts compartilhando mesmo IP, com portas diferentes.
-- **One‑to‑one**: um IP do pool por host interno (drop se não houver IP livre).
-- **Fixed Port Range**:
-    - Divide faixas de portas de cada IP público entre hosts; usado em cenários tipo **CGNAT**.
-- **Port Block Allocation (PBA)**:
-    - Aloca blocos de portas por host, com rastreabilidade em logs (muito usado por ISPs/CGNAT).
-
-#### 6.3 DNAT / VIP
-
-- VIP padrão = **Static NAT** (one‑to‑one):
-    - Entrada: IP externo → IP interno.
-    - Saída: o mesmo IP externo do VIP é usado como **SNAT** daquele servidor (mesmo que policy esteja em “use interface address”).
-- **Port Forwarding**:
-    - Traduz porta externa → porta interna (443→443, 10443→443 etc.).
-- Policies:
-    - Na policy de entrada, o VIP é escolhido no campo **Destination**.
-
-#### 6.4 Match VIP em policies de deny
-
-- Por padrão (até 7.2.3), destinos tipo `all`/address **não casam** com VIPs.
-- Para bloquear por país/IP específico um VIP, é preciso:
-    - Habilitar `set match-vip enable` na policy DENY **ou**
-    - Usar o próprio VIP no campo **Destination**.
-- Desde ~7.2.4, policies DENY novas já vêm com **match‑vip enable** por padrão.
-
-#### 6.5 Boas práticas de NAT
-
-- Conferir ranges de IPPool para evitar **sobreposição** com IPs de interface ou outros dispositivos.
-- Internos acessando servidor interno publicado:
-    - Preferir DNS interno apontando para o IP **interno**, não o IP público.
-- Evitar VIPs desnecessários; só expor o que realmente precisa.
-- Fazer mudanças de NAT em **janela de manutenção** e sempre testar.
-
-### 7. Policy List, melhores práticas e performance
-
-- Ordem top‑down é crítica; sempre posicionar **regra mais específica acima da genérica**.
-- Manter policies o mais **específicas** possível (origem/destino/serviço).
-- Cuidado ao editar objetos usados em várias policies: afeta tudo de uma vez.
-- Sessões ativas podem ser **reavaliadas** após mudança, gerando pico de CPU/memória (até conserve mode).
-- Manipulação de ordem:
-    - GUI: **drag and drop**.
-    - CLI: `config firewall policy` → `move <id> before|after <id>`.
-
-## Flow-based Inspection
-No modo **flow-based**, a inspeção acontece diretamente no fluxo do tráfego.
-
-### Características
-- Foco em desempenho
-- Menor latência
-- Processamento mais leve que o modo proxy em muitos casos
-
-### Quando usar
-- Ambientes que priorizam performance
-- Cenários com alto volume de tráfego
-- Quando não se precisa de análise tão profunda
-
-### Vantagens
-- Mais rápido
-- Menor impacto de processamento
-- Boa eficiência operacional
-
----
-
-## Proxy-based Inspection
-No modo **proxy-based**, o FortiGate atua como intermediário entre cliente e servidor.
-
-### Características
-- O tráfego é terminado e reprocessado pelo firewall
-- Permite inspeção mais profunda
-- Pode aplicar controles mais detalhados
-
-### Vantagens
-- Maior profundidade de análise
-- Mais recursos para políticas e segurança
-- Melhor controle em determinados cenários web
-
-### Desvantagens
-- Maior uso de recursos
-- Pode introduzir mais latência
-- Requer atenção ao dimensionamento
+# Firewall Policies no FortiGate
+
+Uma **Firewall Policy** define quais tráfegos podem atravessar o FortiGate e quais ações serão aplicadas a eles. A política identifica o tráfego por critérios como interfaces, endereços, serviços e horário, e determina se ele será permitido ou negado.
+
+## Como as políticas são avaliadas
+
+As políticas são avaliadas em ordem **top-down**, de cima para baixo:
+
+1. O FortiGate compara o tráfego com a primeira política.
+2. Se houver correspondência (*match*), aplica essa política e interrompe a busca.
+3. Se nenhuma política corresponder, o tráfego é negado pela regra implícita **Implicit Deny**.
+
+> A primeira política correspondente é aplicada. Uma regra mais específica abaixo não será considerada se o tráfego já corresponder a uma regra anterior.
+
+## O que uma política pode determinar
+
+Uma política pode definir:
+
+- Se o tráfego será **permitido** ou **negado**.
+- Quais perfis de segurança serão aplicados.
+- Se será usado SNAT.
+- Se haverá autenticação de usuários.
+- Como o tráfego será registrado em logs.
+
+Em uma política com ação `ACCEPT`, o tráfego ainda pode ser bloqueado por um perfil de segurança se uma inspeção detectar uma ameaça ou violação.
+
+## Componentes de uma Firewall Policy
+
+Os principais campos de uma política de tráfego encaminhado são:
+
+| Campo | Função |
+|---|---|
+| **Incoming Interface** | Interface ou zona pela qual o tráfego entra |
+| **Outgoing Interface** | Interface ou zona pela qual o tráfego sai |
+| **Source** | Origem do tráfego, como endereço, usuário ou serviço de Internet |
+| **Destination** | Destino do tráfego |
+| **Service** | Protocolo e portas que devem corresponder |
+| **Schedule** | Período em que a política está ativa |
+| **Action** | Ação: `ACCEPT` ou `DENY` |
+
+Na GUI, o nome da política normalmente é solicitado. O material da aula informa que a exigência de nomes pode ser alterada em **Feature Visibility**. A obrigatoriedade e as opções disponíveis podem variar conforme a versão.
+
+### Schedule
+
+O agendamento define quando a política pode ser usada.
+
+- `always`: política ativa continuamente, 24 horas por dia e 7 dias por semana.
+- Agendamentos personalizados: limitam a política a dias e horários específicos.
+
+### Action
+
+- **`ACCEPT`**: permite que o tráfego prossiga para as demais verificações configuradas, como perfis de segurança.
+- **`DENY`**: nega o tráfego que corresponder à política.
+
+## Critérios de correspondência
+
+De forma geral, o FortiGate avalia se o tráfego corresponde aos seguintes elementos:
+
+1. Interfaces de entrada e saída.
+2. Origem.
+3. Destino.
+4. Serviço.
+5. Agendamento.
+6. Ação configurada.
+
+A política precisa corresponder ao fluxo real: interface de entrada, interface de saída, endereços, protocolo, portas e horário.
+
+### Interfaces múltiplas e `any`
+
+A GUI pode ocultar ou desabilitar opções para selecionar múltiplas interfaces ou `any`. O material da aula indica que essas opções podem ser habilitadas em **Feature Visibility**. A CLI pode oferecer opções adicionais, mas a sintaxe e o suporte dependem da versão.
+
+## Objetos de origem e destino
+
+### Origem
+
+Uma política pode usar objetos como:
+
+- Endereço IP individual ou intervalo de IPs.
+- Sub-rede no formato IP/máscara.
+- FQDN — o FortiGate precisa conseguir resolver o nome.
+- GeoIP.
+- Endereço dinâmico, por exemplo, associado a um Fabric Connector.
+- Intervalo de endereços MAC.
+- Usuário individual ou grupo de usuários.
+- Internet Service Database (ISDB), conforme a configuração.
+
+Usuários e grupos podem ser locais ou associados a serviços remotos, como Active Directory, LDAP ou RADIUS. O material também cita o uso de FSSO.
+
+### Destino
+
+O destino pode ser especificado por objetos como:
+
+- Endereço IP, sub-rede ou intervalo de IPs.
+- FQDN.
+- GeoIP.
+- Endereço dinâmico.
+- ISDB.
+
+A identificação de usuário não é configurada como objeto de destino na política de encaminhamento descrita na aula: ela é associada à origem e à autenticação do usuário.
+
+> GeoIP e ISDB dependem de informações atualizadas da FortiGuard. Verifique licenças e conectividade quando esses objetos não funcionarem como esperado.
+
+## Services
+
+Um objeto de serviço define os protocolos e as portas que podem corresponder à política. O material cita:
+
+- TCP, UDP e SCTP.
+- ICMP.
+- IP.
+
+Conforme o protocolo, o serviço pode especificar:
+
+- Número de protocolo.
+- Porta de origem e/ou de destino.
+- Intervalo de portas.
+- Tipo e código, no caso de ICMP.
+
+Use serviços específicos sempre que possível, em vez de liberar tráfego desnecessário.
+
+## Tipos de políticas
+
+O FortiGate oferece diferentes tipos de políticas, cada uma destinada a uma categoria de tráfego:
+
+- **Firewall Policy IPv4/IPv6**: controla tráfego encaminhado pelo FortiGate.
+- **Virtual Wire Pair Policy**: controla tráfego entre interfaces de um virtual wire pair.
+- **Proxy Policy**: controla tráfego processado pelo proxy, conforme os recursos configurados.
+- **Multicast Policy IPv4/IPv6**: controla tráfego multicast.
+- **Local-in Policy**: controla tráfego destinado ao próprio FortiGate, como acesso administrativo e determinados serviços locais.
+- **DoS Policy IPv4/IPv6**: monitora e limita padrões de tráfego associados a ataques de negação de serviço.
+- **Traffic Shaping Policy**: controla ou prioriza largura de banda e tráfego.
+
+> Uma Local-in Policy é diferente de uma política de tráfego encaminhado: ela trata de tráfego cujo destino é o próprio FortiGate.
+
+## Policy List, IDs e ordem
+
+Cada política recebe um **ID único** quando é criada. O ID permanece associado à política mesmo que sua posição na lista seja alterada.
+
+O material descreve estas visualizações:
+
+- **Interface Pair View**: agrupa políticas de acordo com o par de interfaces de entrada e saída.
+- **Sequence View**: mostra as políticas na ordem de processamento.
+
+Para alterar a ordem:
+
+- Na GUI, pode-se usar arrastar e soltar (*drag-and-drop*).
+- Pela CLI, pode-se usar o comando `move`, conforme a sintaxe disponível na versão.
+
+A combinação de políticas pode ser considerada quando elas têm critérios e comportamento semelhantes. Antes de combinar regras, avalie diferenças em perfis de segurança, autenticação e logging.
+
+## Security Profiles
+
+Perfis de segurança são aplicados às políticas com ação `ACCEPT`. Eles ajudam a detectar e bloquear ameaças, controlar aplicações e URLs e, em alguns cenários, reduzir o risco de vazamento de dados.
+
+Perfis citados na aula:
+
+- Antivirus.
+- Web Filter.
+- DNS Filter.
+- Application Control.
+- Intrusion Prevention System (IPS).
+- SSL Inspection.
+- Video Filter.
+- File Filter.
+- Email Filter.
+- VoIP.
+- Web Application Firewall.
+- Inline CASB.
+- Data Loss Prevention (DLP).
+
+Alguns perfis podem não estar visíveis na GUI por padrão e podem depender de habilitação em **Feature Visibility**, licença ou versão.
+
+## Modos de inspeção
+
+### Flow-based
+
+No modo **flow-based**, o tráfego é inspecionado durante o processamento do fluxo.
+
+- Em geral, prioriza desempenho e throughput.
+- Pode usar menos recursos do que o modo proxy em cenários comparáveis.
+- Algumas funções avançadas podem não estar disponíveis.
+
+### Proxy-based
+
+No modo **proxy-based**, o FortiGate pode armazenar temporariamente o tráfego em memória e analisá-lo de forma mais completa antes de tomar uma decisão.
+
+- Permite determinados recursos avançados, dependendo do perfil e da versão.
+- Pode consumir mais CPU e memória.
+- Deve ser considerado no dimensionamento do equipamento.
+
+A aula cita recursos como quota, Safe Search, Web Profile Override, Video Filter, Inline CASB, ICAP, WAF e DLP entre as funções associadas ao modo proxy. A disponibilidade exata varia por recurso, modelo e versão.
+
+> Em alguns equipamentos de entrada, o modo proxy pode não aparecer na GUI por padrão. Confirme o suporte e a forma de habilitação na documentação da versão antes de alterar a configuração.
+
+## Logging em políticas
+
+O logging registra informações sobre o tráfego e as ações do FortiGate.
+
+### Tipos de registro citados
+
+- **Security Events / UTM**: registra eventos associados aos perfis de segurança.
+- **All Sessions**: registra as sessões de tráfego, conforme a configuração da política.
+- Em políticas `DENY`, a opção citada é **Log Violation Traffic**.
+
+O comportamento padrão descrito no material é registrar eventos de segurança. A opção `Generate Logs When Session Starts` pode gerar um log no início e outro no encerramento da sessão. Isso pode aumentar o uso de processamento e armazenamento; habilite-a quando houver necessidade operacional.
+
+### Sessões negadas
+
+A aula cita estas opções de CLI para controlar o registro de tráfego negado:
+
+- `ses-denied-traffic`: relacionado ao registro das sessões negadas na tabela de sessões.
+- `block-session-timer`: define por quanto tempo a sessão negada permanece na tabela; o material cita **30 segundos** como padrão.
+
+A sintaxe e o contexto desses parâmetros podem variar conforme a versão. Consulte a referência da CLI antes de aplicar mudanças.
+
+### Destinos e consulta de logs
+
+Os logs podem ser enviados ou armazenados em:
+
+- Disco ou memória local do FortiGate.
+- FortiGate Cloud.
+- FortiAnalyzer, local ou em nuvem.
+- Syslog.
+
+A GUI permite consultar logs de tráfego e eventos de segurança, aplicar filtros e escolher origem e período dos registros. O material cita também a opção **Show Matching Logs** na lista de políticas para localizar logs relacionados a uma regra específica.
+
+## GeoIP, ISDB e Geographic-Based ISDB
+
+### GeoIP
+
+GeoIP representa uma região geográfica associada a um endereço IP. Pode ser usado como critério de origem ou destino, conforme a configuração.
+
+### ISDB
+
+A **Internet Service Database (ISDB)** contém informações mantidas pela Fortinet sobre serviços de Internet, como faixas de IP, protocolos e portas associados a serviços conhecidos.
+
+### Geographic-Based ISDB
+
+Combina a identificação de um serviço de Internet com uma região geográfica. A aula cita a possibilidade de selecionar país, região e cidade, de acordo com o recurso e a versão.
+
+> GeoIP e ISDB dependem de bases de dados atualizadas. Confirme licenciamento, conectividade com a FortiGuard e atualização das bases quando os resultados forem inesperados.
+
+## Boas práticas
+
+- Faça backup da configuração antes de criar, alterar ou remover políticas: [[317_Backup_e_restore]].
+- Teste mudanças em uma janela de manutenção.
+- Quando possível, aplique a mudança inicialmente a um grupo pequeno de usuários ou endereços.
+- Use políticas específicas para origem, destino e serviços necessários.
+- Evite usar uma sub-rede mais ampla do que o necessário.
+- Revise perfis de segurança e configuração de logs por política.
+- Confira a ordem das regras: a primeira correspondência é aplicada.
+- Avalie o impacto de alterações em objetos compartilhados por várias políticas.
+- Considere que mudanças são aplicadas imediatamente e podem levar à reavaliação de sessões ativas.
+- Acompanhe CPU, memória, sessões e logs após mudanças relevantes.
+
+## Resumo para revisão
+
+- Políticas são avaliadas **top-down**.
+- A primeira regra correspondente é aplicada.
+- Sem correspondência, o tráfego é negado pelo **Implicit Deny**.
+- Uma política combina interfaces, origem, destino, serviço, agendamento e ação.
+- `ACCEPT` permite que o tráfego prossiga para as inspeções configuradas; `DENY` nega o tráfego.
+- Perfis de segurança são associados a políticas de permissão.
+- A ordem, o escopo dos objetos e o logging afetam diretamente o comportamento e o diagnóstico.
+
+## Relações
+
+- [[322_NAT]]
+- [[314_Roteamento]]
+- [[316_Acesso_Administrativos]]
+- [[317_Backup_e_restore]]
+- [[319_FortiGuard_Distribution_Network_FDN]]

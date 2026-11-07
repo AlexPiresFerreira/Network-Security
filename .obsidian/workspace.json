@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3. Fortinet/3. Conceitos - FortiGate/3.2. Firewall Policies and NAT/321_Firewall_Policy.md",
+                "file": "3. Fortinet/3. Conceitos - FortiGate/3.2. Firewall Policies and NAT/322_NAT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "321_Firewall_Policy"
+              "title": "322_NAT"
             }
           }
         ]
@@ -187,6 +187,8 @@
   "active": "b848a1215792fa32",
   "lastOpenFiles": [
     "3. Fortinet/3. Conceitos - FortiGate/3.2. Firewall Policies and NAT/attachments/Pasted image 20261107101558.png",
+    "3. Fortinet/3. Conceitos - FortiGate/3.2. Firewall Policies and NAT/322_NAT.md",
+    "3. Fortinet/3. Conceitos - FortiGate/3.2. Firewall Policies and NAT/321_Firewall_Policy.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.2. Firewall Policies and NAT/attachments",
     "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/313_VLANs.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.2. Firewall Policies and NAT",
@@ -213,8 +215,6 @@
     "3. Fortinet/3. Conceitos - FortiGate/3.10. Visão geral da plataforma.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.10. Conserve Mode e redução de consumo.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.13. Memória e arquitetura do sistema.md",
-    "3. Fortinet/3. Configuração - FortiGate/3.1.0. Configurações gerais.md",
-    "3. Fortinet/3. Configuração - FortiGate/3.1.1. Netflow.md",
     "16. Syslog",
     "15. Automação",
     "14. Treinamento/Telecom",
@@ -231,7 +231,6 @@
     "teste",
     "12. Emuladores/10.1. Eve-NG/attachments/Saida.png",
     "12. Emuladores/10.1. Eve-NG/attachments/IDuserEve2.png",
-    "12. Emuladores/10.1. Eve-NG/attachments/IDuserEve.png",
     "Sem título.canvas",
     "Sem título 1.canvas"
   ]

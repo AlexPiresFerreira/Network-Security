@@ -437,7 +437,12 @@
     "firmware": 425,
     "fortiguard": 426,
     "fdn": 427,
-    "atualizacoes": 428
+    "atualizacoes": 428,
+    "firewall-policy": 429,
+    "snat": 430,
+    "dnat": 431,
+    "ip-pool": 432,
+    "vip": 433
   },
   "_version": 3
 }
