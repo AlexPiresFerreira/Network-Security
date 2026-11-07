@@ -19,8 +19,6 @@ Configurar corretamente o acesso ao FortiGate é fundamental para a segurança e
 
 **Descrição:** Define parâmetros para o acesso via porta serial do console.
 
-bash
-
 ```
 config system console
    set baudrate 9600 # Velocidade de comunicação (padrão 9600 ou 115200)
@@ -393,7 +391,7 @@ VDOM: root
 - FortiGate Administration Guide (docs.fortinet.com)
 - FortiGate Security Best Practices (docs.fortinet.com)
 
-```
+
 ---
 
 ## 4️⃣ 03_NTP-DNS.md
@@ -433,7 +431,7 @@ config system ntp
     set syncinterval 60         # Intervalo de sincronização em segundos (padrão 60)
     set type client             # FortiGate como cliente NTP
 end
-```
+
 
 **Dica Importante:**
 
@@ -550,7 +548,7 @@ Copiar![](data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org
 - FortiGate CLI Reference (docs.fortinet.com)
 - FortiGate Best Practices Guide (docs.fortinet.com)
 
-```
+
 ---
 
 ## 5️⃣ 04_Aliases-Comandos-Uteis.md
@@ -598,7 +596,6 @@ config system alias
         set command "diagnose debug flow trace stop && diagnose debug disable"
     next
 end
-```
 
 **Dica Importante:**
 
