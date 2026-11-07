@@ -25,6 +25,15 @@
 
 ---
 
+## Ordem da verificação da policy 
+
+- **Interfaces de entrada e saída**
+- **Origem:** endereço IP, usuário ou serviço de Internet
+- **Destino:** endereço IP ou serviço de Internet
+- **Serviços**
+- **Agendamentos**
+- **Ação:** **ACCEPT** (permitir) ou **DENY** (negar)
+
 ## 3. Tipos de políticas
 
 - **Firewall Policy (IPv4/IPv6)** – política “normal” de L3/L4.
