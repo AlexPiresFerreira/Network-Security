@@ -67,6 +67,19 @@ Uma rota estática pode especificar:
 - **Menor prioridade**: pode ser usada para desempatar rotas estáticas com distância equivalente, conforme a configuração.
 - Rotas menos preferidas podem permanecer configuradas sem serem selecionadas para encaminhamento.
 
+| Tipo de rota         | Distance |
+| -------------------- | -------- |
+| Connected            | 0        |
+| Static (SD-WAN zone) | 1        |
+| Static (DHCP)        | 5        |
+| Static (Manual)      | 10       |
+| Static (IKE)         | 15       |
+| EGBP                 | 20       |
+| OSPF                 | 110      |
+| IS-IS                | 115      |
+| RIP                  | 120      |
+| IBGP                 | 200      |
+
 ## ECMP — Equal-Cost Multi-Path
 
 ECMP permite instalar múltiplas rotas de custo equivalente para o mesmo destino. O tráfego pode ser distribuído entre os caminhos disponíveis.

@@ -64,5 +64,5 @@ Planeje essa associação com cuidado: o tráfego entre VDOMs não é permitido 
 ## Relações
 
 - [[312_DHCP]]
-- [[314_Roteamento]]
+- [[331_Roteamento]]
 - [[315_VDOM]]

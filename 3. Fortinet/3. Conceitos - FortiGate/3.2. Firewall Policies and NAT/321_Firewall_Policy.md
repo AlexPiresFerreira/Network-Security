@@ -277,7 +277,7 @@ Combina a identificação de um serviço de Internet com uma região geográfica
 ## Relações
 
 - [[322_NAT]]
-- [[314_Roteamento]]
+- [[331_Roteamento]]
 - [[316_Acesso_Administrativos]]
 - [[317_Backup_e_restore]]
 - [[319_FortiGuard_Distribution_Network_FDN]]

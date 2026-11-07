@@ -83,6 +83,6 @@ Consulte [[316_Acesso_Administrativos]] para perfis, privilégios e contas admin
 ## Relações
 
 - [[313_VLANs]]
-- [[314_Roteamento]]
+- [[331_Roteamento]]
 - [[316_Acesso_Administrativos]]
 - [[317_Backup_e_restore]]
