@@ -446,7 +446,9 @@
     "autenticacao-local": 434,
     "2fa": 435,
     "fortitoken": 436,
-    "otp": 437
+    "otp": 437,
+    "sso": 438,
+    "fsso": 439
   },
   "_version": 3
 }
