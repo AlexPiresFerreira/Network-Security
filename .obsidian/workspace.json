@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "2.1 Links"
             }
+          },
+          {
+            "id": "cdfc41644c1eaf25",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.15.1"
+              },
+              "icon": "lucide-book-up",
+              "title": "Notas de Lançamento 1.15.1"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -184,7 +197,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b848a1215792fa32",
+  "active": "cdfc41644c1eaf25",
   "lastOpenFiles": [
     "3. Fortinet/3. Conceitos - FortiGate/3.4. Firewall_Authemtication/345_SSO_e_FSSO.md",
     "3. Fortinet/2. Geral/2.1 Links.md",
