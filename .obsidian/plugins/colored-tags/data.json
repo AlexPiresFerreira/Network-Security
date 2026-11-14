@@ -454,7 +454,8 @@
     "antivirus": 442,
     "security-profiles": 443,
     "flow-based": 444,
-    "proxy-based": 445
+    "proxy-based": 445,
+    "web-filter": 446
   },
   "_version": 3
 }
