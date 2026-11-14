@@ -25,12 +25,14 @@
             "id": "cdfc41644c1eaf25",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.15.1"
+                "file": "3. Fortinet/3. Conceitos - FortiGate/3.5. Filtro de conteudo/3.5.3 Web Filtering.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Notas de Lançamento 1.15.1"
+              "icon": "lucide-file",
+              "title": "3.5.3 Web Filtering"
             }
           }
         ],
@@ -199,6 +201,10 @@
   },
   "active": "cdfc41644c1eaf25",
   "lastOpenFiles": [
+    "3. Fortinet/3. Conceitos - FortiGate/3.5. Filtro de conteudo/3.5.2 Antivírus.md",
+    "3. Fortinet/3. Conceitos - FortiGate/3.5. Filtro de conteudo/3.5.1 Certificados.md",
+    "3. Fortinet/3. Conceitos - FortiGate/3.5. Filtro de conteudo/3.5.0 Geral.md",
+    "3. Fortinet/3. Conceitos - FortiGate/3.5. Filtro de conteudo",
     "3. Fortinet/3. Conceitos - FortiGate/3.4. Firewall_Authemtication/345_SSO_e_FSSO.md",
     "3. Fortinet/2. Geral/2.1 Links.md",
     "3. Fortinet/2. Geral/02_Acesso-e-Console.md",
@@ -227,15 +233,11 @@
     "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/319_FortiGuard_Distribution_Network_FDN.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/317_Backup_e_restore.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/312_DHCP.md",
-    "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/311_Acesso_inicial_e_administracao.md",
-    "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/316_Acesso_Administrativos.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings",
-    "3. Fortinet/3. Conceitos - FortiGate/3.12. FortiGuard - FDN - Updates.md",
     "16. Syslog",
     "15. Automação",
     "14. Treinamento/Telecom",
     "Sem título/desktop.ini",
-    "14. Treinamento",
     "attachments/populadaMAC.png",
     "attachments/TabelaMAC.png",
     "attachments/SwitchFundamentais.png",

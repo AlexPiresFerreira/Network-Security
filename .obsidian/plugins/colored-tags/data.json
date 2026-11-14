@@ -448,7 +448,13 @@
     "fortitoken": 436,
     "otp": 437,
     "sso": 438,
-    "fsso": 439
+    "fsso": 439,
+    "certificados": 440,
+    "ssl-inspection": 441,
+    "antivirus": 442,
+    "security-profiles": 443,
+    "flow-based": 444,
+    "proxy-based": 445
   },
   "_version": 3
 }
