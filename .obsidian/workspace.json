@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3. Fortinet/3. Conceitos - FortiGate/3.5. Filtro de conteudo/3.5.3 Web Filtering.md",
+                "file": "3. Fortinet/3. Conceitos - FortiGate/3.5. Filtro de conteudo/3.5.5 IPS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.5.3 Web Filtering"
+              "title": "3.5.5 IPS"
             }
           }
         ],
@@ -201,6 +201,10 @@
   },
   "active": "cdfc41644c1eaf25",
   "lastOpenFiles": [
+    "3. Fortinet/3. Conceitos - FortiGate/3.13. DLP.md",
+    "3. Fortinet/3. Conceitos - FortiGate/3.10. Visão geral da plataforma.md",
+    "3. Fortinet/3. Conceitos - FortiGate/3.5. Filtro de conteudo/3.5.5 IPS.md",
+    "3. Fortinet/3. Conceitos - FortiGate/3.5. Filtro de conteudo/3.5.3 Web Filtering.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.5. Filtro de conteudo/3.5.2 Antivírus.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.5. Filtro de conteudo/3.5.1 Certificados.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.5. Filtro de conteudo/3.5.0 Geral.md",
@@ -229,10 +233,6 @@
     "5. Ferramentas/5.2. Ferramenta Offline.md",
     "5. Ferramentas/5.1. Ferramentas Online.md",
     "3. Fortinet/3. Configuração - FortiGate/3.1.20 VDOM.md",
-    "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/315_VDOM.md",
-    "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/319_FortiGuard_Distribution_Network_FDN.md",
-    "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/317_Backup_e_restore.md",
-    "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings/312_DHCP.md",
     "3. Fortinet/3. Conceitos - FortiGate/3.1.  System and Network Settings",
     "16. Syslog",
     "15. Automação",
