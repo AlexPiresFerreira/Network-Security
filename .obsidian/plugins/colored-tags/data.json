@@ -455,7 +455,11 @@
     "security-profiles": 443,
     "flow-based": 444,
     "proxy-based": 445,
-    "web-filter": 446
+    "web-filter": 446,
+    "application-control": 447,
+    "ips-engine": 448,
+    "ips": 449,
+    "threat-prevention": 450
   },
   "_version": 3
 }
